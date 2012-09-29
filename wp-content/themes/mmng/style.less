@@ -1,0 +1,563 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+             
+             /* TO DO */
+/* 
+	Fix IE8 bugs
+
+	On the home page, get rid of the grey at the bottom, but make sure 
+	the gray stays on all of the other pages. 
+
+	Go to the section id = "peer-review" and make this appear above the slider. 
+	If you load the site right now, it is behind the slider. I designed it in PS 
+	to have a white boarder, so just make it appear over the slider.  */
+
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/**
+ * Text Styling
+ */
+html {
+	background-color: #e1e1e1;
+}
+body {
+	font-size: 80%;
+	line-height: 24px;
+	font-weight: 400;
+	color: #444;
+	font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+}
+
+/** All Link Styling **/
+a {
+	color: #666;
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+/** Selection Styling **/
+::selection {
+	background: #363;
+	color: #fff;
+}
+
+/** H tag styling. **/
+h1, h2, h3, h4 {
+
+	font-family:"Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+	font-weight: bold;
+}
+h1 {
+	margin: 20px 0;
+	color: #222;
+	font-size: 30px;
+}
+h2 {
+	font-size: 25px;
+	margin: 15px 0;
+	color: #333;
+}
+h3 {
+	font-size: 20px;
+	margin: 10px 0;
+	color: #444;
+}
+
+p {
+	font-family:"Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+	margin: 15px 0;
+	line-height: 25px;
+}
+
+.content ul {
+	list-style: circle inside none;
+	margin-left: 5px;
+}
+
+/* main layout stuff */
+#wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#header-main {
+	width: 960px;
+	height: 110px;
+	margin: 0 auto;
+
+
+}
+#header:before {
+	content: '';
+	background-color: #2c5e1a;
+	display: block;
+	height: 10px;
+}
+#header {
+	border-bottom: 1px #dbdbdb solid;
+	/*background-image: url(images/header-bg.png);*/
+	background-color:#FFFFFF;
+
+}
+.sub-footer	{
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: -50px;
+	height:50px;
+	background-image: url(images/shadow.png);
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+#slider-wrap {
+	height: 330px;
+	background-color: #1a1a1a;
+	background-image: url(images/wood-bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+#slider-main {
+	width: 960px;
+	height: 330px !important;
+	margin: 0 auto;
+}
+
+#logo {
+	display: block;
+	float: left;
+	top: 0px;
+}
+
+/* Top Menu Styling */
+#navigation {
+	float: right;
+	border-right: 1px solid #dbdbdb;
+	height:110px;
+}
+#navigation #menu-navigation {
+	z-index: 99;
+	margin: 0 0 0 13px;
+	padding: 0;
+	list-style: none;
+	line-height: 1;
+}
+#navigation #menu-navigation > li {
+	float: left;
+	width: auto;
+	padding: 0;
+	margin: 0px;
+	border-left: 1px solid #dbdbdb;
+	position: relative;
+	height: 111px;
+}
+#navigation #menu-navigation > li > a {
+	color: #808080;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 48px 30px 48px 29px;
+	position: relative;
+	display: block;
+	z-index: 100;
+}
+#navigation #menu-navigation > li:hover > a {
+	color: #000;
+
+}
+#navigation #menu-navigation > li:hover {
+	/*background-image: url(images/nav-hover-bg.jpg);*/
+}
+#navigation #menu-navigation > li.current_page_item a {
+	color: #000;
+}
+#navigation .sub-menu {
+	display: none;
+	z-index: 98;
+	position: absolute;
+	width: 150px;
+	background-color: white;
+	top: 111px;
+	border-bottom: 1px solid #dbdbdb;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+}
+#navigation .sub-menu > li > a {
+	line-height: 30px;
+	padding: 3px 10px;
+	display: block;
+}
+#navigation .sub-menu > li:hover > a {
+	color: #000;
+	background-color:#e8e8e8;
+}
+#navigation .sub-menu > li {
+	border-top: 1px solid #dbdbdb;
+}
+#navigation .sub-menu > li:first-child {
+	border-top: none;
+}
+#navigation #menu-navigation > li:hover > .sub-menu {
+	display: block;
+}
+
+/* footer nav */
+#footer {
+	width: 960px;
+	margin: 0 auto;
+	padding: 5px 0;
+	background-color: #FFFFFF;
+	margin-top:15px;
+	display:block;
+	padding-bottom: 25px;
+}
+#footer .left {
+	float: left;
+}
+#footer .right {
+	float: right;
+}
+#footer .menu {
+	text-align: center;
+}
+#footer .menu li {
+	display: inline-block;
+	margin-right: 10px;
+	border-left: 1px solid #dbdbdb;
+	padding-left: 12px;
+	margin-left: 0px
+}
+#footer .menu li:first-child {
+	border-left: none;
+	}
+#footer .sub-menu {
+	display: none;
+}
+.copyright {
+	width:960px;
+	overflow: hidden;
+	margin:0 auto;
+	text-align: center;
+	font-size:10px;
+	padding-top: 10px
+}
+#footer img {
+	padding: 0 0 15px 0;
+
+}
+
+/* Frontpage content */
+#lower_wrapper{
+	background-color:#FFFFFF !important;
+}
+.main {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#main-frontpage {
+	padding-top: 70px;
+	margin-top: -60px; 
+	margin-bottom:20px;
+}
+.content-left {
+	width: 630px;
+	float: left;
+	margin-bottom: 30px;
+	padding-right:27px;
+	border-right: 1px #ccc solid;
+}
+.content {
+	padding-bottom: 30px;
+
+}
+.sidebar {
+	
+	width: 275px;
+	float: right;
+	
+	padding-left: 24px;
+	padding-bottom:10px;
+}
+#main-frontpage-sidebar {
+
+	
+}
+
+#main-frontpage-sidebar-newslist li {
+	padding: 10px 0;
+	border-top: 1px #ededed solid;
+	line-height: 15px;
+	text-align: left;
+	font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+#main-frontpage-sidebar-newslist li:first-child {
+	border-top: none;
+}
+#main-frontpage-sidebar-newslist figcaption {
+	margin-top: 8px;
+	text-align: center;
+	color: #000000;
+	font-size: 16px;
+	font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+	font-style: bold;
+}
+
+/** blog **/
+
+.post_list_item {
+
+}
+
+/* Attorney page styling */
+
+.shadow{
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: -50px;
+	height:48px;
+	background-image: url(images/shadow.png);
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.content_attorneys{
+	margin: 10px 30px 10px 30px; 
+}
+.content_attorneys h1 {
+padding-top:25px;
+border-bottom: 2px solid #4a4a4a !important;
+padding-bottom: 8px;
+margin-bottom: 5px;
+
+}
+.content_attorneys h2 {
+padding:30px 0 0px 0;
+
+}
+.content_attorneys h3 {
+padding:10px 30px 0 30px;
+margin-bottom:5px !important;
+}
+.content_attorneys p {
+padding:0 60px 0 60px;
+margin:0px;
+line-height:22px;
+font-size: 14px;
+}
+
+.content_attorneys address {
+	text-align: right !important;
+
+}
+.content_attorneys ul li{
+	list-style-type: circle;
+	margin:10px 30px 0 60px;
+}
+
+.main {
+	width: 960px;
+	background-color: #FFFFFF;
+}
+#wrapper{
+	background-color:#e1e1e1;
+}
+
+/* Sub-header styles*/
+#sub-header-wrap {
+	height: 100px;
+	background-color: #343434;
+	/*background-image: url(images/mesh-transparent-bg.png);*/
+	border-bottom: 1px solid #FFFFFF;
+	margin-bottom: -1px;
+	
+}
+#sub-header-main {
+	width: 960px;
+	margin: 0 auto;
+}
+
+/* Practice Area page styling */
+
+.shadow{
+	width: 960px;
+	margin: 0 auto;
+	margin-bottom: -50px;
+	height:48px;
+	background-image: url(images/shadow.png);
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.content_prac_areas{
+	margin: 10px 30px 10px 30px;
+}
+.content_prac_areas h1 {
+padding-top:25px;
+border-bottom: 3px solid #4a4a4a !important;
+padding-bottom: 5px;
+margin-bottom: 5px;
+
+}
+.content_prac_areas h2 {
+padding:20px 0 0 20px;
+
+}
+.content_prac_areas h3 {
+padding:0 50px 0 50px;
+}
+.content_prac_areas p {
+padding:0 75px 0 60px;
+margin:0px;
+line-height:22px;
+font-size: 14px;
+}
+
+.content_prac_areas address {
+	text-align: right !important;
+
+}
+.content_prac_areas ul li{
+	list-style-type: circle;
+}
+.space{
+	height:50px;
+	width:960px;
+	margin:0 auto;
+	background-color:#FFFFFF;
+}
+
+
+
+/* Contact page styling */
+
+.content_contact{
+	margin: 10px 30px 10px 30px;
+}
+.content_contact h1 {
+padding-top:25px;
+border-bottom: 3px solid #4a4a4a !important;
+padding-bottom: 5px;
+margin-bottom: 5px;
+
+}
+.content_contact h2 {
+padding:20px 0 0 20px;
+
+}
+.content_contact h3 {
+padding:0 50px 0 50px;
+}
+.content_contact p {
+padding:20px 75px 0 60px;
+margin:0px;
+line-height:22px;
+font-size: 16px;
+}
+
+.content_contact address {
+	text-align: center;
+	font-size: 15;
+	font-style: italic;
+}
+.content_contact ul li{
+	list-style-type: circle;
+}
+.content_contact .sgmap {
+	margin: 0 auto;
+}
+
+.content_contact .sgmap img {
+	display:block;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 9px 6px -6px grey;
+	box-shadow: 0px 9px 6px -6px grey;
+	border-top: 3px solid #dbdbdb;
+	border-left: 3px solid #dbdbdb;
+	border-right: 3px solid #dbdbdb;
+	border-bottom: 3px solid #dbdbdb;
+
+}
+
+
+/* News page styling */
+
+.post_list_item {
+	padding: 20px 40px 40px 40px;
+}
+.post_list_item_title {
+	font-size: 18px;
+	border-bottom: 2px solid #4a4a4a !important;
+	padding-bottom:3px;
+	margin-bottom: 0;
+}
+.post_list_item_date{
+	text-align: right;
+	margin-top: -25px;
+	font-size: 12 !important;
+}
+
+
+#peer-review img {            
+	display:block;
+   position:absolute;
+   width: 960px;
+   height: 140px;
+	z-index: 99;
+   
+   bottom: 75px;
+
+}
+#peer-review {
+   width: 960px;
+   height: 140px;
+   position: relative;
+   margin: 0 auto;
+   margin-bottom: -70px;
+}
